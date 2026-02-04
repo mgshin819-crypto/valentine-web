@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#ffb6c1, #ffd1dc);
+  font-family: Arial, sans-serif;
+}
+
+/* Card */
+.card {
+  position: relative;
+  z-index: 10;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  width: 320px;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+.btns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#yesBtn {
+  background: hotpink;
+  color: white;
+}
+
+#noBtn {
+  background: lightgray;
+}
+
+/* Message */
+#msg {
+  margin-top: 20px;
+}
+
+/* Hearts */
+#hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 20px;
+  animation: floatUp 4s linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.8);
+    opacity: 0;
+  }
+}
